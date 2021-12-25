@@ -4,7 +4,7 @@ let hScore = 0;
 
 const highScore = document.querySelector(".high-score p");
 
-//document.addEventListener("DOMContentLoaded", getHighScore);
+document.addEventListener("DOMContentLoaded", getHighScore);
 
 const startGame = () => {
   const playBtn = document.querySelector(".intro button");
@@ -116,6 +116,14 @@ const compare = (playerChoice, compChoice) => {
     }
   }
 };
+
+function getHighScore() {
+  if (localStorage.getItem("h", hScore) === null) {
+    highScore.textContent = "0";
+  } else {
+    highScore.textContent = localStorage.getItem("h", hScore);
+  }
+}
 
 startGame();
 playmatch();
