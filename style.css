@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 section {
-  background-color: aqua;
+  background-color: #3b4d61 ;
   height: 100vh;
   font-family: sans-serif;
 }
 
 .score {
-  color: brown;
+  color: #f5f0e1;
   height: 20vh;
   display: flex;
   justify-content: space-around;
@@ -25,7 +25,7 @@ section {
   font-size: 25px;
 }
 .intro {
-  color: brown;
+  color:#f5f0e1;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -45,8 +45,8 @@ section {
   border: none;
   background: none;
   font-size: 20px;
-  color: darkblue;
-  background: floralwhite;
+  color: #2e3c4d;
+  background: #aed6dc;
   cursor: pointer;
 }
 .match {
@@ -57,7 +57,7 @@ section {
   transition: opacity 0.5s ease-out;
 }
 .winner {
-  color: mediumblue;
+  color: #e5e5dc;
   text-align: center;
   font-size: 50px;
 }
