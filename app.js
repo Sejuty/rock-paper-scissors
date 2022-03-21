@@ -37,6 +37,7 @@ const playmatch = () => {
   const compOptions = ["rock", "paper", "scissor"];
   options.forEach((option) => {
     option.addEventListener("click", function () {
+      startGame();
       //computer choice
       const compNum = Math.floor(Math.random() * 3);
       const compChoice = compOptions[compNum];
