@@ -5,6 +5,7 @@ let hScore = 0;
 const highScore = document.querySelector(".high-score p");
 
 document.addEventListener("DOMContentLoaded", getHighScore);
+const winner = document.querySelector(".winner");
 
 const startGame = () => {
   const playBtn = document.querySelector(".intro button");
@@ -37,6 +38,12 @@ const playmatch = () => {
   const compOptions = ["rock", "paper", "scissor"];
   options.forEach((option) => {
     option.addEventListener("click", function () {
+      // Resetting winner text when a new option is choosen
+      winner.textContent = "";
+
+      // Reseting player hand to rock when a new option is choosen
+      playerHand.src = `./assets/rock.png`;
+      compHand.src = `./assets/rock.png`;
       //computer choice
       const compNum = Math.floor(Math.random() * 3);
       const compChoice = compOptions[compNum];
@@ -70,7 +77,7 @@ const updateScore = () => {
 };
 
 const compare = (playerChoice, compChoice) => {
-  const winner = document.querySelector(".winner");
+  
 
   if (playerChoice === compChoice) {
     winner.textContent = "Tie";
